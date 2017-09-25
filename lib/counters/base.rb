@@ -6,7 +6,7 @@ class Wait
     def initialize(total)
       # Attempt to prevent causing an infinite loop by being very strict about
       # the value passed.
-      unless total.is_a?(Fixnum) and total > 0
+      unless total.is_a?(Integer) and total > 0
         raise(ArgumentError, "invalid number of attempts: #{total.inspect}")
       end
 
